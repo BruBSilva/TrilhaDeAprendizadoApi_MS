@@ -7,3 +7,6 @@
 [submodule "learning-service"]
 	path = learning-service
 	url = git@github.com:BruBSilva/learning-service.git
+[submodule "trilha-service"]
+	path = trilha-service
+	url = git@github.com:BruBSilva/trilha-service.git

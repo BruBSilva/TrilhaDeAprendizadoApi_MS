@@ -10,3 +10,6 @@
 [submodule "trilha-service"]
 	path = trilha-service
 	url = git@github.com:BruBSilva/trilha-service.git
+[submodule "auth-service"]
+	path = auth-service
+	url = git@github.com:BruBSilva/auth-service.git

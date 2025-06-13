@@ -1,6 +1,3 @@
-[submodule "course-service"]
-	path = course-service
-	url = git@github.com:BruBSilva/course-service.git
 [submodule "user-service"]
 	path = user-service
 	url = git@github.com:BruBSilva/user-service.git

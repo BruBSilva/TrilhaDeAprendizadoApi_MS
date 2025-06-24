@@ -1,4 +1,6 @@
-<img src="https://github.com/vitoriasilva13/front/blob/main/src/assets/logomarca.jpg" alt="Corvis Logo" width="300"/>
+<p align="center" width="100%">
+    <img src="https://github.com/vitoriasilva13/front/blob/main/src/assets/logomarca.jpg" alt="Corvis Logo" width="300"/>
+</p>
 
 # Corvis - Trilha de Aprendizagem 📚
 

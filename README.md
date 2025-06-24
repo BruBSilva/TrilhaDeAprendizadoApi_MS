@@ -32,7 +32,7 @@
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 Abaixo está um exemplo da modelagem de classes utilizada no sistema:
 
@@ -64,17 +64,25 @@ Primeiro, clone o repositório para sua máquina local:
 Certifique-se de ter o PostgreSQL instalado e configurado e crie os seguintes bancos de dados:
 
 ```sql
-    CREATE DATABASE trilha-service;
-    CREATE DATABASE learning-service;
-    CREATE DATABASE user-service;
+    CREATE DATABASE 'trilha-service';
+    CREATE DATABASE 'learning-service';
+    CREATE DATABASE 'user-service';
 ```
 
-Configure as credenciais de acesso ao banco de dados no arquivo `application.properties` de cada serviço:
+Crie as variáveis de ambiente necessárias para a conexão com o banco de dados. Você pode definir as variáveis no seu projeto ou nas variáveis de ambiente do sistema.
+
+```
+    DB_HOST=seu_host
+    DB_PORT=sua_porta
+    DB_PASSWORD=sua_senha
+```
+
+Essas variáveis serão utilizadas nos arquivos de configuração do Spring Boot.
 
 ```properties
-    spring.datasource.url=jdbc:postgresql://localhost:[sua_porta]/trilha-service
-    spring.datasource.username=seu_usuario
-    spring.datasource.password=sua_senha
+    spring.datasource.url=jdbc:postgresql://${DB_HOST}:${DB_PORT}/user-service
+    spring.datasource.username=postgres
+    spring.datasource.password=${DB_PASSWORD}
 ```
 
 ### 3. **Executando Front**

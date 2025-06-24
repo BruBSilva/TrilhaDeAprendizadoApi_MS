@@ -66,9 +66,9 @@ Primeiro, clone o repositório para sua máquina local:
 Certifique-se de ter o PostgreSQL instalado e configurado e crie os seguintes bancos de dados:
 
 ```sql
-    CREATE DATABASE 'trilha-service';
-    CREATE DATABASE 'learning-service';
-    CREATE DATABASE 'user-service';
+    CREATE DATABASE trilha-service;
+    CREATE DATABASE learning-service;
+    CREATE DATABASE user-service;
 ```
 
 Crie as variáveis de ambiente necessárias para a conexão com o banco de dados. Você pode definir as variáveis no seu projeto ou nas variáveis de ambiente do sistema.

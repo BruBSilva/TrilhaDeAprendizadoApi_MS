@@ -1,0 +1,15 @@
+@startuml
+
+package "trilha-service" {
+    !include ../trilha-service/Diagrams/classe.puml
+}
+
+package "learning-service" {
+    !include ../learning-service/Diagrams/classe.puml
+}
+
+package "user-service" {
+    !include ../user-service/Diagrams/classe.puml
+}
+
+@enduml

@@ -1,14 +1,8 @@
-<img src="front/src/assets/logomarca.jpg" alt="Corvis Logo" width="200"/>
+<img src="https://github.com/vitoriasilva13/front/blob/main/src/assets/logomarca.jpg" alt="Corvis Logo" width="300"/>
 
 # Corvis - Trilha de Aprendizagem 📚
 
-**Corvis** é um sistema de trilhas de aprendizagem desenvolvido para auxiliar na gestão de cursos e trilhas de conhecimento. O sistema permite que usuários se inscrevam em cursos, visualizem suas trilhas de aprendizagem e gerenciem seu progresso.
-
-### O sistema permite que usuários:
-
-- Se inscrevam em trilhas.
-- Visualizem suas trilhas de aprendizagem e conclua módulos.
-- Acompanhem e gerenciem seu progresso.
+**Corvis** é um sistema de trilhas de aprendizagem desenvolvido para auxiliar na gestão de trilhas de conhecimento. O sistema permite que usuários se inscrevam em trilhas, as vizualizem e gerenciem seu progresso.
 
 ---
 

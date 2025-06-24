@@ -12,7 +12,6 @@
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Funcionalidades Principais](#-funcionalidades-principais)
 - [Instruções de Uso](#-instruções-de-uso)
-- [Licença](#-licença)
 
 ---
 

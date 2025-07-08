@@ -15,4 +15,4 @@
 	url = git@github.com:vitoriasilva13/front.git
 [submodule "gateway-service"]
 	path = gateway-service
-	url = https://github.com/vitoriasilva13/gateway.git
+	url = git@github.com:vitoriasilva13/gateway.git

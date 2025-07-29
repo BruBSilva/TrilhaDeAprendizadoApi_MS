@@ -12,4 +12,12 @@ package "user-service" {
     !include ../user-service/Diagrams/classe.puml
 }
 
+package "auth-service" {
+    !include ../auth-service/Diagrams/classe.puml
+}
+
+' package "gateway-service" {
+'   !include ../gateway-service/Diagrams/classe.puml
+'}
+
 @enduml

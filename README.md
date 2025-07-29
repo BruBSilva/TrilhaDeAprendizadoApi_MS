@@ -28,6 +28,7 @@
 - **Java**
 - **Spring Boot**
 - **JPA / Hibernate**
+- **JWT**
 
 ### Banco de Dados
 - **PostgreSQL**
@@ -36,7 +37,11 @@
 
 ## 📂 Estrutura do Projeto
 
-Abaixo está um exemplo da modelagem de classes utilizada no sistema:
+Fluxograma que representa a estrutura do projeto e o fluxo de dados entre os componentes:
+
+<img src="Diagrams/fluxograma.jpg" alt="Fluxograma do Projeto"/>
+
+Modelagem de classes utilizada no sistema:
 
 <img src="Diagrams/classe.png" alt="Diagrama de Classes"/>
 

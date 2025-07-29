@@ -14,6 +14,11 @@
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Funcionalidades Principais](#-funcionalidades-principais)
 - [Instruções de Uso](#-instruções-de-uso)
+  - [Clonando o repositório](#1-clonando-o-repositório)
+  - [Configuração do Banco de Dados](#2-configuração-do-banco-de-dados)
+  - [Executando o Back-end](#3-executando-o-back-end)
+  - [Criando o usuário principal](#4-criando-o-usuario-principal)
+  - [Executando o Front-end](#5-executando-front)
 
 ---
 
@@ -92,7 +97,21 @@ Essas variáveis serão utilizadas nos arquivos de configuração do Spring Boot
     spring.datasource.password=${DB_PASSWORD}
 ```
 
-### 3. **Executando Front**
+### 3. **Executando o Back-end**
+
+Execute todos os projetos exceto o `front` e verifique se as tabelas foram criadas corretamente no banco de dados.
+
+### 4. **Crie o usuário principal**
+
+```sql
+    INSERT INTO public.usuarios (id, nome, email, senha_hash, role) --hash da senha "123"
+    VALUES (1, 'MasterAdm', 'admmaster@teste.com', '202cb962ac59075b964b07152d234b70', 'ADMIN');
+
+    INSERT INTO public.administradores (id)
+    VALUES (1);
+```
+
+### 5. **Executando Front**
 
 Para rodar o front-end, acesse o repositório 'front' e siga as instruções especificadas no arquivo `README.md`:
 

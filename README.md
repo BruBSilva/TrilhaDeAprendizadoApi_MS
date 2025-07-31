@@ -17,7 +17,7 @@
   - [Clonando o repositório](#1-clonando-o-repositório)
   - [Configuração do Banco de Dados](#2-configuração-do-banco-de-dados)
   - [Executando o Back-end](#3-executando-o-back-end)
-  - [Criando o usuário principal](#4-criando-o-usuario-principal)
+  - [Criando o usuário principal](#4-crie-o-usuário-principal)
   - [Executando o Front-end](#5-executando-front)
 
 ---
@@ -28,6 +28,7 @@
 - **React**
 - **JavaScript**
 - **Tailwind CSS**
+- **Figma**
 
 ### Back-end
 - **Java**
@@ -49,6 +50,12 @@ Fluxograma que representa a estrutura do projeto e o fluxo de dados entre os com
 Modelagem de classes utilizada no sistema:
 
 <img src="Diagrams/classe.png" alt="Diagrama de Classes"/>
+
+### Mockups das telas do sistema
+
+Nosso projeto de design das telas do sistema pode ser acessado por [este link](https://www.figma.com/design/B7xvIZHp3pKfn6PnWCmGFw/Trilha-de-Aprendizagem?node-id=0-1&t=VMIaJwEpJmkwWkJq-1).
+
+<img src="Diagrams/login.jpg" alt="Mockup da tela de login"/>
 
 ---
 
@@ -113,9 +120,7 @@ Execute todos os projetos exceto o `front` e verifique se as tabelas foram criad
 
 ### 5. **Executando Front**
 
-Para rodar o front-end, acesse o repositório 'front' e siga as instruções especificadas no arquivo `README.md`:
-
-https://github.com/vitoriasilva13/front/
+Para rodar o front-end, acesse o repositório 'front' e siga as instruções especificadas [neste link](https://github.com/vitoriasilva13/front/blob/main/README.md).
 
 ---
 

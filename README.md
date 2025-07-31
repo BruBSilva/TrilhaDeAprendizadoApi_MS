@@ -12,6 +12,7 @@
 
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Mockups do Sistema](#-mockups-do-sistema)
 - [Funcionalidades Principais](#-funcionalidades-principais)
 - [Instruções de Uso](#-instruções-de-uso)
   - [Clonando o repositório](#1-clonando-o-repositório)
@@ -19,6 +20,7 @@
   - [Executando o Back-end](#3-executando-o-back-end)
   - [Criando o usuário principal](#4-crie-o-usuário-principal)
   - [Executando o Front-end](#5-executando-front)
+- [Colaboradores](#-colaboradores)
 
 ---
 
@@ -51,7 +53,9 @@ Modelagem de classes utilizada no sistema:
 
 <img src="Diagrams/classe.png" alt="Diagrama de Classes"/>
 
-### Mockups das telas do sistema
+---
+
+## 🖌️ Mockups do Sistema
 
 Nosso projeto de design das telas do sistema pode ser acessado por [este link](https://www.figma.com/design/B7xvIZHp3pKfn6PnWCmGFw/Trilha-de-Aprendizagem?node-id=0-1&t=VMIaJwEpJmkwWkJq-1).
 
@@ -124,9 +128,20 @@ Para rodar o front-end, acesse o repositório 'front' e siga as instruções esp
 
 ---
 
+## 👨‍💻 Colaboradores
+
+- [Ana Luiza - @nalusantana](https://github.com/nalusantana)
+- [Bruna Borges - @BruBSilva](https://github.com/BruBSilva)
+- [João Antonio - @Player07x](https://github.com/Player07x)
+- [Vitória Silva - @vitoriasilva13](https://github.com/vitoriasilva13)
+
+---
+
 ## 🐦‍⬛ Corvis
 
 Este projeto é guiado por nosso corvo sábio.
+
+
 
 
 

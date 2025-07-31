@@ -12,7 +12,7 @@
 
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Mockups do Sistema](#-mockups-do-sistema)
+- [Mockups do Sistema](#%EF%B8%8F-mockups-do-sistema)
 - [Funcionalidades Principais](#-funcionalidades-principais)
 - [Instruções de Uso](#-instruções-de-uso)
   - [Clonando o repositório](#1-clonando-o-repositório)

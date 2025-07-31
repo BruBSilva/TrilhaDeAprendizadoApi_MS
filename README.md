@@ -112,6 +112,9 @@ Essas variáveis serão utilizadas nos arquivos de configuração do Spring Boot
 
 Execute todos os projetos exceto o `front` e verifique se as tabelas foram criadas corretamente no banco de dados.
 
+> [!IMPORTANT]  
+> Garanta que todos os projetos estejam rodando nas branches nomeadas `main`.
+
 ### 4. **Crie o usuário principal**
 
 ```sql

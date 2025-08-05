@@ -1,18 +1,30 @@
 [submodule "user-service"]
 	path = user-service
 	url = git@github.com:BruBSilva/user-service.git
+	branch = main
+	
 [submodule "learning-service"]
 	path = learning-service
 	url = git@github.com:BruBSilva/learning-service.git
+	branch = main
+	
 [submodule "trilha-service"]
 	path = trilha-service
 	url = git@github.com:BruBSilva/trilha-service.git
+	branch = main
+	
 [submodule "auth-service"]
 	path = auth-service
 	url = git@github.com:BruBSilva/auth-service.git
+	branch = main
+	
 [submodule "front"]
 	path = front
 	url = git@github.com:vitoriasilva13/front.git
+	branch = main
+	
 [submodule "gateway-service"]
 	path = gateway-service
 	url = git@github.com:vitoriasilva13/gateway.git
+	branch = main
+	

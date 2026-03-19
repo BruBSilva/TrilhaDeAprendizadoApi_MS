@@ -1,0 +1,83 @@
+@startuml Caso de Uso — Sistema de Trilhas
+
+skinparam actorStyle awesome
+skinparam backgroundColor #F8FAFC
+skinparam roundcorner 12
+
+skinparam usecase {
+  BackgroundColor #EEF2FF
+  BorderColor     #6366F1
+  FontColor       #4338CA
+  FontSize        13
+}
+
+skinparam actor {
+  BackgroundColor #EEF2FF
+  BorderColor     #6366F1
+  FontColor       #1E293B
+  FontSize        13
+}
+
+left to right direction
+
+' ─────────────────────────────────────────
+'  ATORES
+' ─────────────────────────────────────────
+actor "Usuário\n(Aluno)"       as Aluno
+actor "Administrador"          as Admin
+
+' ─────────────────────────────────────────
+'  SISTEMA
+' ─────────────────────────────────────────
+rectangle "Corvis - Sistema de Trilhas de Aprendizado" {
+
+  ' ── Casos de uso compartilhados ────────
+  usecase "Realizar Login"              as UC_Login
+  usecase "Autenticar / Validar\nToken JWT" as UC_Auth
+
+  ' ── Casos de uso do Aluno ───────────────
+  usecase "Visualizar Trilhas"          as UC_VerTrilhas
+  usecase "Iniciar Trilha"              as UC_IniciarTrilha
+  usecase "Avançar Módulo"              as UC_AvancarModulo
+  usecase "Acompanhar Progresso"        as UC_Progresso
+  usecase "Visualizar Conquistas"       as UC_Conquistas
+  usecase "Ver Perfil / XP e Nível"     as UC_Perfil
+
+  ' ── Casos de uso do Administrador ───────
+  usecase "Gerenciar Categorias"        as UC_Categorias
+  usecase "Gerenciar Trilhas"           as UC_GerTrilhas
+  usecase "Gerenciar Módulos"           as UC_Modulos
+  usecase "Gerenciar Conquistas"        as UC_GerConquistas
+  usecase "Gerenciar Usuários"          as UC_Usuarios
+  usecase "Visualizar Progresso\ndos Alunos" as UC_VerProgresso
+}
+
+' ─────────────────────────────────────────
+'  ASSOCIAÇÕES — ALUNO
+' ─────────────────────────────────────────
+Aluno --> UC_Login
+Aluno --> UC_VerTrilhas
+Aluno --> UC_IniciarTrilha
+Aluno --> UC_AvancarModulo
+Aluno --> UC_Progresso
+Aluno --> UC_Conquistas
+Aluno --> UC_Perfil
+
+' ─────────────────────────────────────────
+'  ASSOCIAÇÕES — ADMINISTRADOR
+' ─────────────────────────────────────────
+Admin --> UC_Login
+Admin --> UC_Categorias
+Admin --> UC_GerTrilhas
+Admin --> UC_Modulos
+Admin --> UC_GerConquistas
+Admin --> UC_Usuarios
+Admin --> UC_VerProgresso
+
+' ─────────────────────────────────────────
+'  RELACIONAMENTOS ENTRE CASOS DE USO
+' ─────────────────────────────────────────
+UC_Login       .> UC_Auth         : «include»
+UC_AvancarModulo .> UC_Conquistas : «extend»
+
+@enduml

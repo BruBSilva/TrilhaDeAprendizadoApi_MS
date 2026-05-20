@@ -1,0 +1,61 @@
+@startuml
+left to right direction
+title Estrutura de Pacotes do MS de users do Sistema Trilha de Aprendizagem
+
+' Organização de pacotes
+package br {
+    package edu {
+        package ifg {
+              package trilhadeaprendizagemapims.user {
+                    package config {
+                        class Configuracao
+                    }
+
+                    package controller {
+                        class UsuarioAbstractController
+                        class AdministradorController
+                        class AlunoController
+                    }
+
+                    package dto {
+                        class UsuarioDto
+                        class AlunoDto /'extende de usuarioDto'/
+                        class AdministradorDto /'extende de usuarioDto'/
+                        class UsuarioCreateDto
+                        class AlunoCreateDto
+                        class AdminCreateDto
+                    }
+
+                    package model {
+                        class Aluno
+                        class Usuario
+                        class Administrador
+
+                        package enums{
+                            enum Role
+                        }
+
+                        Usuario <|-- Aluno
+                        Usuario <|-- Administrador
+                    }
+
+                    package repository {
+                        interface UsuarioRepository
+                        interface AdministradorRepository
+                        interface AlunoRepository
+                    }
+
+                    package service {
+                        interface UsuarioAbstractService
+                        class AlunoService
+                        class AdministradorService
+                    }
+              }
+        }
+    }
+}
+
+' Dependências entre camadas
+
+
+@enduml

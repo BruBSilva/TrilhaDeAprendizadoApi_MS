@@ -1,7 +1,0 @@
-@startuml
-    class Auth {
-        -email: String
-        -senha: String
-        -role: String
-    }
-@enduml

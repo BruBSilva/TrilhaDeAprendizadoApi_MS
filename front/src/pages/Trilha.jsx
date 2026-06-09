@@ -396,8 +396,8 @@ export default function Trilha({ activeUser }) {
       
       console.log('Creating new progresso for usuarioId:', currentUsuarioId, 'trilhaId:', trilhaId);
       const result = await createProgresso({
-        usuarioId: currentUsuarioId,
-        trilhaId
+        usuarioId: parseInt(currentUsuarioId, 10),
+        trilhaId: parseInt(trilhaId, 10)
       });
       
       console.log('createProgresso success:', result);

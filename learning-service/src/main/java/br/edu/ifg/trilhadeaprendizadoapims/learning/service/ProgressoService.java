@@ -157,7 +157,7 @@ public class ProgressoService {
             usuarioConquistaService.gerarConquista(dto);
 
             try {
-                String url = String.format("http://localhost:8080/usuario/aluno/%d/add-xp", usuario_id);
+                String url = String.format("http://user-service:8081/usuario/aluno/%d/add-xp", usuario_id);
                 
                 String jsonBody = String.format("{\"xpGanho\": %d}", dto.getConquistaXpGanho());
                 
@@ -201,9 +201,9 @@ public class ProgressoService {
         String url;
 
         if (tipo.equals("TRILHA")) {
-            url = String.format("http://localhost:8080/trilha/%d/trilha-conquista-detalhada", id);
+            url = String.format("http://trilha-service:8083/trilha/%d/trilha-conquista-detalhada", id);
         } else if (tipo.equals("MODULO")) {
-            url = String.format("http://localhost:8080/trilha/modulo-conquista-detalhada/%d", id);
+            url = String.format("http://trilha-service:8083/trilha/modulo-conquista-detalhada/%d", id);
         }else {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tipo de conquista inválido: " + tipo);
         }
@@ -229,7 +229,7 @@ public class ProgressoService {
     }
 
     public List<Long> buscarModulosPorTrilha(Long trilhaId, String jwt) {
-        String url = String.format("http://localhost:8080/trilha/%d/modulos-ids", trilhaId);
+        String url = String.format("http://trilha-service:8083/trilha/%d/modulos-ids", trilhaId);
 
         try {
             HttpHeaders headers = criarHeadersComJwt(jwt);
@@ -257,7 +257,7 @@ public class ProgressoService {
     }
 
     public Boolean verificaUsuarioValido(Long usuario_id, String jwt) {
-        String url = String.format("http://localhost:8080/usuario/aluno/%d", usuario_id);
+        String url = String.format("http://user-service:8081/usuario/aluno/%d", usuario_id);
 
         try {
             HttpHeaders headers = criarHeadersComJwt(jwt);

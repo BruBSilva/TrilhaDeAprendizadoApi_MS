@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavegation } from "react-router-dom"
 import { getUserConquistas } from "../services/learningApi"
 import { useAuth } from '../hooks/useAuth.js'
 import UserAvatar from "./UserAvatar"

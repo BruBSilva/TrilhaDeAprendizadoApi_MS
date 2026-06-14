@@ -43,7 +43,7 @@ function AppContent() {
                 } 
               />
               <Route
-                path="conquistas" //JP: Caminho para conquistas
+                path="/conquistas" //JP: Caminho para conquistas
                 element={
                   <ProtectedRoute>
                     <Conquistas/>

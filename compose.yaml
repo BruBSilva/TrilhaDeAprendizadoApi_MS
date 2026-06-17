@@ -45,6 +45,7 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
       DB_PASSWORD: postgres
+      GATEWAY_HOST: gateway-service
     depends_on:
       postgres:
         condition: service_healthy

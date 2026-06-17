@@ -33,15 +33,18 @@ rectangle "Corvis - Sistema de Trilhas de Aprendizado" {
 
   ' ── Casos de uso compartilhados ────────
   usecase "Realizar Login"              as UC_Login
+  usecase "Realizar Logout"              as UC_Logout
   usecase "Autenticar / Validar\nToken JWT" as UC_Auth
 
   ' ── Casos de uso do Aluno ───────────────
+  usecase "Cadastrar-se na Plataforma"  as UC_Cadastro
   usecase "Visualizar Trilhas"          as UC_VerTrilhas
-  usecase "Iniciar Trilha"              as UC_IniciarTrilha
-  usecase "Avançar Módulo"              as UC_AvancarModulo
-  usecase "Acompanhar Progresso"        as UC_Progresso
+  usecase "Iniciar Trilha"              as UC_IniciarTrilha  
+  usecase "Navegar Módulo"              as UC_AvancarModulo
+  usecase "Concluir Módulo"             as UC_ConcluirModulo
+  usecase "Ver Progresso"               as UC_Progresso
   usecase "Visualizar Conquistas"       as UC_Conquistas
-  usecase "Ver Perfil / XP e Nível"     as UC_Perfil
+  usecase "Ver Perfil"                  as UC_Perfil
 
   ' ── Casos de uso do Administrador ───────
   usecase "Gerenciar Categorias"        as UC_Categorias
@@ -56,9 +59,12 @@ rectangle "Corvis - Sistema de Trilhas de Aprendizado" {
 '  ASSOCIAÇÕES — ALUNO
 ' ─────────────────────────────────────────
 Aluno --> UC_Login
+Aluno --> UC_Logout
+Aluno --> UC_Cadastro
 Aluno --> UC_VerTrilhas
 Aluno --> UC_IniciarTrilha
 Aluno --> UC_AvancarModulo
+Aluno --> UC_ConcluirModulo
 Aluno --> UC_Progresso
 Aluno --> UC_Conquistas
 Aluno --> UC_Perfil
@@ -67,6 +73,7 @@ Aluno --> UC_Perfil
 '  ASSOCIAÇÕES — ADMINISTRADOR
 ' ─────────────────────────────────────────
 Admin --> UC_Login
+Admin --> UC_Logout
 Admin --> UC_Categorias
 Admin --> UC_GerTrilhas
 Admin --> UC_Modulos

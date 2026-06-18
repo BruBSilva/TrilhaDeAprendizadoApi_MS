@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Trilha</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div id="menu-container"></div>
+
+    <div>
+        <form onsubmit="enviarFormulario(event)" class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+            <h1 class="text-2xl font-bold mb-6">Cadastro de Trilha</h1>
+
+            <div class="mb-4">
+                <label for="nome" class="block font-semibold">Nome:</label>
+                <input type="text" id="nome" name="nome" required class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="descricao" class="block font-semibold">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="categorias" class="block font-semibold">Categoria:</label>
+                <select name="categoria" id="categoria" class="w-full p-2 border rounded"></select>
+            </div>
+
+            <fieldset class="mb-6 border border-gray-300 p-4 rounded">
+                <legend class="font-semibold text-lg">Conquista da Trilha</legend>
+                <input type="hidden" id="idConquista" name="idConquista">
+
+                <div class="mb-2">
+                    <label for="nomeConquista" class="block">Nome:</label>
+                    <input type="text" id="nomeConquista" name="nomeConquista" class="w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-2">
+                    <label for="descricaoConquista" class="block">Descrição:</label>
+                    <input type="text" id="descricaoConquista" name="descricaoConquista" class="w-full p-2 border rounded">
+                </div>
+
+                <div>
+                    <label for="xpGanho" class="block">XP Ganho:</label>
+                    <input type="number" id="xpGanho" name="xpGanho" class="w-full p-2 border rounded">
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-6 border border-gray-300 p-4 rounded">
+                <legend class="font-semibold text-lg">Módulos</legend>
+
+                <div class="mb-4">
+                    <label for="ordemModulo" class="block">Ordem:</label>
+                    <input type="number" id="ordemModulo" name="ordem" class="w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="nomeModulo" class="block">Nome do Módulo:</label>
+                    <input type="text" id="nomeModulo" name="titulo" class="w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="conteudoModulo" class="block mb-1">Conteúdo:</label>
+                    <input type="hidden" id="conteudoModulo" name="conteudo">
+                    <div id="editor" class="border rounded p-2"></div>
+                </div>
+
+                <fieldset class="mb-4 border border-gray-200 p-4 rounded">
+                    <legend class="font-semibold">Conquista do Módulo</legend>
+                    <div class="mb-2">
+                        <label for="nomeConquistaModulo" class="block">Nome:</label>
+                        <input type="text" id="nomeConquistaModulo" name="nomeConquistaModulo" class="w-full p-2 border rounded">
+                    </div>
+                    <div class="mb-2">
+                        <label for="descricaoConquistaModulo" class="block">Descrição:</label>
+                        <input type="text" id="descricaoConquistaModulo" name="descricaoConquistaModulo" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label for="xpGanhoModulo" class="block">XP Ganho:</label>
+                        <input type="number" id="xpGanhoModulo" name="xpGanhoModulo" class="w-full p-2 border rounded">
+                    </div>
+                </fieldset>
+
+                <button type="button" onclick="adicionarModulo()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Adicionar Módulo</button>
+
+                <table class="w-full mt-4 table-auto border border-gray-300">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-2">Título</th>
+                            <th class="px-4 py-2">Conteúdo</th>
+                            <th class="px-4 py-2">Ordem</th>
+                            <th class="px-4 py-2" colspan="2">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modulos-list" class="bg-white">
+                        <!-- Módulos inseridos aparecem aqui -->
+                    </tbody>
+                </table>
+            </fieldset>
+            
+            <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Enviar</button>
+        </form>
+        
+        <p id="cadastrada" class="mt-6 text-center font-semibold"></p>
+    </div>
+    <script src="/admin/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="/admin/js/form-trilha.js"></script>
+</body>
+</html>

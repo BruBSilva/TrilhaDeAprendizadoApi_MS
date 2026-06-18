@@ -1,0 +1,41 @@
+@startuml
+
+' Classe Progresso
+class Progresso {
+    -id: int
+    -usuario_id: int
+    -trilha_id: int
+    -trilha-modulos: List<Long>
+    -dataInicio: Date
+    -dataConclusao: Date
+    -xpGanho: int
+    -porcentual: double
+    -moduloAtual_id: int
+    -status: StatusProgresso
+}
+
+' Classe UsuarioConquista
+class UsuarioConquista {
+  -id: int
+  -usuario_id: int
+  -conquista_id: int
+  -conquista_nome: String
+  -conquista_descricao: String
+  -conquista_source: String
+  -conquista_modulo: String
+  -conquista_trilha: String
+  -conquista_xpGanhp: int
+  -dataConquista: Date
+}
+
+' Enum de Status do Progresso
+enum StatusProgresso {
+  NAO_INICIADO
+  EM_ANDAMENTO
+  CONCLUIDO
+  PAUSADO
+}
+
+Progresso --> StatusProgresso
+
+@enduml

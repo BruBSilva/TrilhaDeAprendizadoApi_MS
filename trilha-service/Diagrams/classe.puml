@@ -1,0 +1,56 @@
+@startuml
+
+' Classe Categoria
+class Categoria {
+  -id: int
+  -nome: String
+  -descricao: String
+}
+
+' Classe Trilha
+class Trilha {
+  -id: int
+  -nome: String
+  -descricao: String
+  -categoria: Categoria
+  -conquista: Conquista
+  -modulos: ArrayList<Modulo>
+}
+
+' Classe Modulo
+class Modulo {
+  -id: int
+  -titulo: String
+  -trilha: Trilha
+  -ordem: int
+  -conteudo: String
+  -conquista: Conquista
+}
+
+' Classe Conquista
+class Conquista {
+  -id: int
+  -nome: String
+  -descricao: String
+  -tipo: TipoConquista
+  -xpGanho: int
+  -trilhaId: Trilha
+  -moduloId: Modulo
+}
+
+' Enum para o tipo de conquista
+enum TipoConquista {
+  MODULO
+  TRILHA
+  GERAL
+}
+
+' Relacionamentos
+Trilha "1" --> "1" Categoria : pertence >
+Trilha "1" --> "0..*" Modulo : contém >
+Trilha "0..1" --> "0..1" Conquista : contém >
+Modulo "0..1" --> "0..1" Conquista : contém >
+Modulo "1" --> "1" Trilha : pertence >
+Conquista --> TipoConquista
+
+@enduml

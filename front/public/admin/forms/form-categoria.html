@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Categoria</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div id="menu-container"></div>
+
+    <div>
+        <form onsubmit="enviarFormulario(event)" class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+            <h1 class="text-2xl font-bold mb-6">Cadastro de Trilha</h1>
+
+            <div class="mb-4">
+                <label for="nome" class="block font-semibold">Nome:</label>
+                <input type="text" id="nome" name="nome" required class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="descricao" class="block font-semibold">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required class="w-full p-2 border rounded">
+            </div>
+            
+            <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Enviar</button>
+        </form>
+        
+        <p id="cadastrada" class="mt-6 text-center font-semibold"></p>
+    </div>
+    <script src="/admin/menu.js"></script>
+    <script src="/admin/js/form-categoria.js"></script>
+</body>
+
+</html>
